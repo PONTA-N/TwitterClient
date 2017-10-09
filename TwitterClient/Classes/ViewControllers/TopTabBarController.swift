@@ -52,8 +52,30 @@ class TopTabBarController: UITabBarController {
         navigationItem.backBarButtonItem = backButton
     }
 
+    private func doLogout() {
+        let sessionStore = Twitter.sharedInstance().sessionStore
+        guard let userID = sessionStore.session()?.userID else{
+            transitionLoginViewController()
+            return
+        }
+
+        sessionStore.logOutUserID(userID)
+        transitionLoginViewController()
+    }
+
+    private func transitionLoginViewController() {
+        guard let appDelegate = UIApplication.shared.delegate,
+        let window = appDelegate.window else {
+            return
+        }
+
+        self.dismiss(animated: true, completion: nil)
+        let loginViewController = LoginViewController.instantiate()
+        window?.rootViewController = loginViewController
+    }
+
     @IBAction func didTapLogOutButton() {
-        //TODO: ログアウト処理を入れる
+        doLogout()
     }
 }
 

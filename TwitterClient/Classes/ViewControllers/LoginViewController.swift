@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     private func configureLoginButton() {
         loginButton.logInCompletion = { [weak self] (session, error) in
             if session != nil {
-                self?.showTimelineViewController()
+                self?.showTopTabBarController()
             } else if error != nil {
                 self?.showAuthErrorAlert()
             }
@@ -31,8 +31,8 @@ class LoginViewController: UIViewController {
         present(alertController,animated: true,completion: nil)
     }
 
-    private func showTimelineViewController() {
-        let viewController = HomeTimelineViewController.instantiate()
+    private func showTopTabBarController() {
+        let viewController = TopTabBarController.instantiate()
         let navigationController = UINavigationController(rootViewController: viewController)
         self.present(navigationController, animated: true)
     }
