@@ -18,6 +18,7 @@ class HomeTimelineViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        configureRefreshControl()
         getTweets(maxId: nil)
         clearBackButtonText()
     }
@@ -28,6 +29,14 @@ class HomeTimelineViewController: UITableViewController {
         tableView.register(UINib(nibName: TweetCell.nibName, bundle: nil), forCellReuseIdentifier: TweetCell.cellIdentifier)
     }
 
+    private func configureRefreshControl() {
+        refreshControl?.addTarget(self, action: #selector(HomeTimelineViewController.doRefresh), for: UIControlEvents.valueChanged)
+    }
+
+    func doRefresh() {
+        getTweets(maxId: nil)
+    }
+
     private func clearBackButtonText() {
         let backButton = UIBarButtonItem()
         backButton.title = ""
@@ -36,9 +45,15 @@ class HomeTimelineViewController: UITableViewController {
 
     internal func getTweets(maxId: String?) {
         homeTimelineRequest.getHomeTimelineTweets(maxId: maxId, tweets: {[weak self] tweets in
-            self?.tweets += tweets
+            if self?.refreshControl?.isRefreshing == true {
+                self?.tweets = tweets
+            } else {
+                self?.tweets += tweets
+            }
+            self?.refreshControl?.endRefreshing()
         }) { [weak self] error in
             self?.showTweetGetErrorAlert()
+            self?.refreshControl?.endRefreshing()
         }
     }
 

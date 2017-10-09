@@ -35,6 +35,9 @@
                     <tabBarItem key="tabBarItem" title="" image="home_timeline_icon" selectedImage="home_timeline_icon" id="ZIt-40-K4A"/>
                     <navigationItem key="navigationItem" title="タイムライン" id="d8J-pg-t5O"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="K0n-di-82d">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EiN-sC-9AE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
