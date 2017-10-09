@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
         configureLoginButton()
     }
 
-    func configureLoginButton() {
+    private func configureLoginButton() {
         loginButton.logInCompletion = { [weak self] (session, error) in
             if session != nil {
                 self?.showTimelineViewController()
@@ -24,14 +24,16 @@ class LoginViewController: UIViewController {
         }
     }
 
-    func showAuthErrorAlert() {
+    private func showAuthErrorAlert() {
         let alertController = UIAlertController(title: "エラー",message: "認証に失敗しました。通信状況を確認してください。", preferredStyle: UIAlertControllerStyle.alert)
         let confirmButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
         alertController.addAction(confirmButton)
         present(alertController,animated: true,completion: nil)
     }
 
-    func showTimelineViewController() {
-        // TODO: タイムライン画面に遷移させる
+    private func showTimelineViewController() {
+        let viewController = HomeTimelineViewController.instantiate()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.present(navigationController, animated: true)
     }
 }

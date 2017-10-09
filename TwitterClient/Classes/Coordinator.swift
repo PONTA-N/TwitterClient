@@ -24,6 +24,9 @@ class Coordinator {
     }
 
     func openHomeTimelineViewController() {
-        //TODO: タイムライン画面に遷移する処理を追加
+        let viewController = HomeTimelineViewController.instantiate()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 }
