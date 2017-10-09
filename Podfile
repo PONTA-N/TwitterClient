@@ -8,7 +8,5 @@ target 'TwitterClient' do
   # Pods for TwitterClient
   pod 'TwitterKit'
   pod 'SDWebImage'
-  pod 'RxSwift',    '~> 3.0'
-  pod 'RxCocoa',    '~> 3.0'
 
 end
