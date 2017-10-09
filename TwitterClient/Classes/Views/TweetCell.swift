@@ -34,6 +34,7 @@ class TweetCell: UITableViewCell {
             userIconImage.sd_setImage(with: imageURL, completed: nil)
             likedCountLabel.text = (String(tweet.likeCount) + "件のいいね！")
             retweetCountLabel.text = (String(tweet.retweetCount) + "件のリツイート")
+            layoutIfNeeded()
         }
     }
 
