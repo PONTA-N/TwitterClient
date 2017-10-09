@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		3D0A4483C5C5E6A7E0747D23 /* Pods_TwitterClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CB1C6C8CF2ABFA8089977E /* Pods_TwitterClient.framework */; };
 		DA68010D1F7CCA5700B89A6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68010C1F7CCA5700B89A6C /* AppDelegate.swift */; };
-		DA68010F1F7CCA5700B89A6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68010E1F7CCA5700B89A6C /* ViewController.swift */; };
-		DA6801121F7CCA5700B89A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6801101F7CCA5700B89A6C /* Main.storyboard */; };
+		DA68010F1F7CCA5700B89A6C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA68010E1F7CCA5700B89A6C /* LoginViewController.swift */; };
+		DA6801121F7CCA5700B89A6C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6801101F7CCA5700B89A6C /* Login.storyboard */; };
 		DA6801141F7CCA5700B89A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6801131F7CCA5700B89A6C /* Assets.xcassets */; };
 		DA6801171F7CCA5700B89A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6801151F7CCA5700B89A6C /* LaunchScreen.storyboard */; };
+		DABD8A041F8B474700E0F0A7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8A031F8B474700E0F0A7 /* Coordinator.swift */; };
+		DABD8A071F8B63A000E0F0A7 /* Twitter.plist in Resources */ = {isa = PBXBuildFile; fileRef = DABD8A061F8B63A000E0F0A7 /* Twitter.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +23,13 @@
 		C9CB1C6C8CF2ABFA8089977E /* Pods_TwitterClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6801091F7CCA5700B89A6C /* TwitterClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA68010C1F7CCA5700B89A6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA68010E1F7CCA5700B89A6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DA6801111F7CCA5700B89A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA68010E1F7CCA5700B89A6C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DA6801111F7CCA5700B89A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		DA6801131F7CCA5700B89A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA6801161F7CCA5700B89A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA6801181F7CCA5700B89A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DABD8A031F8B474700E0F0A7 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DABD8A061F8B63A000E0F0A7 /* Twitter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Twitter.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DA3D0BF01F80E279008DAA4F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DAF351B61F7D438900B95474 /* ViewControllers */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DA3D0BF11F80E29D008DAA4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAF351B71F7D43A000B95474 /* StoryBoards */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		DA6801001F7CCA5700B89A6C = {
 			isa = PBXGroup;
 			children = (
@@ -78,14 +98,32 @@
 		DA68010B1F7CCA5700B89A6C /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				DA3D0BF01F80E279008DAA4F /* Classes */,
+				DABD8A031F8B474700E0F0A7 /* Coordinator.swift */,
 				DA68010C1F7CCA5700B89A6C /* AppDelegate.swift */,
-				DA68010E1F7CCA5700B89A6C /* ViewController.swift */,
-				DA6801101F7CCA5700B89A6C /* Main.storyboard */,
+				DA3D0BF11F80E29D008DAA4F /* Resources */,
 				DA6801131F7CCA5700B89A6C /* Assets.xcassets */,
-				DA6801151F7CCA5700B89A6C /* LaunchScreen.storyboard */,
 				DA6801181F7CCA5700B89A6C /* Info.plist */,
+				DABD8A061F8B63A000E0F0A7 /* Twitter.plist */,
 			);
 			path = TwitterClient;
+			sourceTree = "<group>";
+		};
+		DAF351B61F7D438900B95474 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA68010E1F7CCA5700B89A6C /* LoginViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DAF351B71F7D43A000B95474 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				DA6801101F7CCA5700B89A6C /* Login.storyboard */,
+				DA6801151F7CCA5700B89A6C /* LaunchScreen.storyboard */,
+			);
+			name = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +190,8 @@
 			files = (
 				DA6801171F7CCA5700B89A6C /* LaunchScreen.storyboard in Resources */,
 				DA6801141F7CCA5700B89A6C /* Assets.xcassets in Resources */,
-				DA6801121F7CCA5700B89A6C /* Main.storyboard in Resources */,
+				DABD8A071F8B63A000E0F0A7 /* Twitter.plist in Resources */,
+				DA6801121F7CCA5700B89A6C /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,10 +205,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TwitterClient/Pods-TwitterClient-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,20 +264,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA68010F1F7CCA5700B89A6C /* ViewController.swift in Sources */,
+				DA68010F1F7CCA5700B89A6C /* LoginViewController.swift in Sources */,
 				DA68010D1F7CCA5700B89A6C /* AppDelegate.swift in Sources */,
+				DABD8A041F8B474700E0F0A7 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DA6801101F7CCA5700B89A6C /* Main.storyboard */ = {
+		DA6801101F7CCA5700B89A6C /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DA6801111F7CCA5700B89A6C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		DA6801151F7CCA5700B89A6C /* LaunchScreen.storyboard */ = {
@@ -345,6 +389,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TwitterClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.naoya-yamamoto.TwitterClient";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TwitterClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.naoya-yamamoto.TwitterClient";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,6 +430,7 @@
 				DA68011D1F7CCA5700B89A6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -6,7 +6,9 @@ target 'TwitterClient' do
   use_frameworks!
 
   # Pods for TwitterClient
-  pod 'SDWebImage'
   pod 'TwitterKit'
+  pod 'SDWebImage'
+  pod 'RxSwift',    '~> 3.0'
+  pod 'RxCocoa',    '~> 3.0'
 
 end
