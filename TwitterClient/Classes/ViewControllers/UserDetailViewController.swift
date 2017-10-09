@@ -93,4 +93,8 @@ extension UserDetailViewController {
         detailView.user = user
         return detailView
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
