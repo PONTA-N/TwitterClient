@@ -74,8 +74,21 @@ class TopTabBarController: UITabBarController {
         window?.rootViewController = loginViewController
     }
 
+    private func confirmLogout() {
+        let alertController = UIAlertController(title: "確認",message: "ログアウトしますか？", preferredStyle: UIAlertControllerStyle.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { [weak self] alert in
+            self?.doLogout()
+        }
+        alertController.addAction(okButton)
+
+        let cancelButton = UIAlertAction(title: "キャンセル", style: UIAlertActionStyle.cancel, handler: nil)
+        alertController.addAction(cancelButton)
+
+        present(alertController,animated: true,completion: nil)
+    }
+
     @IBAction func didTapLogOutButton() {
-        doLogout()
+        confirmLogout()
     }
 }
 
