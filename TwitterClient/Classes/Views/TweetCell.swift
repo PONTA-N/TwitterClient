@@ -12,6 +12,9 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var createdLabel: UILabel!
+    @IBOutlet weak var likedCountLabel: UILabel!
+    @IBOutlet weak var retweetCountLabel: UILabel!
+
     static let estimatedHeight: CGFloat = 60
     static let cellIdentifier = "TweetCell"
     static let nibName = "TweetCell"
@@ -29,6 +32,8 @@ class TweetCell: UITableViewCell {
             createdLabel.text = tweet.createdAt.stringWithFormat(format: "MM/dd HH:mm")
             let imageURL = URL(string: tweet.author.profileImageURL)
             userIconImage.sd_setImage(with: imageURL, completed: nil)
+            likedCountLabel.text = (String(tweet.likeCount) + "件のいいね！")
+            retweetCountLabel.text = (String(tweet.retweetCount) + "件のリツイート")
         }
     }
 
