@@ -27,6 +27,9 @@
 		DABD8A4B1F8B7A1600E0F0A7 /* TwitterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8A4A1F8B7A1600E0F0A7 /* TwitterRequest.swift */; };
 		DABD8A521F8BC88200E0F0A7 /* HomeTimelineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8A501F8BC88200E0F0A7 /* HomeTimelineRequest.swift */; };
 		DABD8A531F8BC88200E0F0A7 /* UserTimelineRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8A511F8BC88200E0F0A7 /* UserTimelineRequest.swift */; };
+		DABD8A551F8BCB1600E0F0A7 /* TopTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD8A541F8BCB1500E0F0A7 /* TopTabBar.storyboard */; };
+		DABD8A571F8BCD6B00E0F0A7 /* TopTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8A561F8BCD6B00E0F0A7 /* TopTabBarController.swift */; };
+		DABD8A5B1F8BE14F00E0F0A7 /* UserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8A5A1F8BE14F00E0F0A7 /* UserRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		DABD8A4A1F8B7A1600E0F0A7 /* TwitterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterRequest.swift; path = Classes/API/TwitterRequest.swift; sourceTree = "<group>"; };
 		DABD8A501F8BC88200E0F0A7 /* HomeTimelineRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTimelineRequest.swift; path = Classes/API/HomeTimelineRequest.swift; sourceTree = "<group>"; };
 		DABD8A511F8BC88200E0F0A7 /* UserTimelineRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTimelineRequest.swift; path = Classes/API/UserTimelineRequest.swift; sourceTree = "<group>"; };
+		DABD8A541F8BCB1500E0F0A7 /* TopTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TopTabBar.storyboard; sourceTree = "<group>"; };
+		DABD8A561F8BCD6B00E0F0A7 /* TopTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTabBarController.swift; sourceTree = "<group>"; };
+		DABD8A5A1F8BE14F00E0F0A7 /* UserRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRequest.swift; path = Classes/API/UserRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 				DABD8A2D1F8B785200E0F0A7 /* HomeTimelineViewController.swift */,
 				DABD8A2E1F8B785200E0F0A7 /* LoginViewController.swift */,
 				DABD8A2F1F8B785200E0F0A7 /* UserDetailViewController.swift */,
+				DABD8A561F8BCD6B00E0F0A7 /* TopTabBarController.swift */,
 			);
 			name = ViewControllers;
 			path = Classes/ViewControllers;
@@ -174,6 +181,7 @@
 				DABD8A3D1F8B786C00E0F0A7 /* LaunchScreen.storyboard */,
 				DABD8A3E1F8B786C00E0F0A7 /* Login.storyboard */,
 				DABD8A3F1F8B786C00E0F0A7 /* UserDetail.storyboard */,
+				DABD8A541F8BCB1500E0F0A7 /* TopTabBar.storyboard */,
 			);
 			name = StoryBoards;
 			path = Resources/StoryBoards;
@@ -194,6 +202,7 @@
 			children = (
 				DABD8A4A1F8B7A1600E0F0A7 /* TwitterRequest.swift */,
 				DABD8A501F8BC88200E0F0A7 /* HomeTimelineRequest.swift */,
+				DABD8A5A1F8BE14F00E0F0A7 /* UserRequest.swift */,
 				DABD8A511F8BC88200E0F0A7 /* UserTimelineRequest.swift */,
 			);
 			name = API;
@@ -267,6 +276,7 @@
 				DABD8A441F8B786C00E0F0A7 /* LaunchScreen.storyboard in Resources */,
 				DABD8A461F8B786C00E0F0A7 /* UserDetail.storyboard in Resources */,
 				DABD8A471F8B786C00E0F0A7 /* TweetCell.xib in Resources */,
+				DABD8A551F8BCB1600E0F0A7 /* TopTabBar.storyboard in Resources */,
 				DABD8A071F8B63A000E0F0A7 /* Twitter.plist in Resources */,
 				DABD8A451F8B786C00E0F0A7 /* Login.storyboard in Resources */,
 				DABD8A431F8B786C00E0F0A7 /* HomeTimeline.storyboard in Resources */,
@@ -348,7 +358,9 @@
 				DABD8A371F8B785200E0F0A7 /* LoginViewController.swift in Sources */,
 				DABD8A521F8BC88200E0F0A7 /* HomeTimelineRequest.swift in Sources */,
 				DABD8A4B1F8B7A1600E0F0A7 /* TwitterRequest.swift in Sources */,
+				DABD8A5B1F8BE14F00E0F0A7 /* UserRequest.swift in Sources */,
 				DABD8A351F8B785200E0F0A7 /* DateExtensions.swift in Sources */,
+				DABD8A571F8BCD6B00E0F0A7 /* TopTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

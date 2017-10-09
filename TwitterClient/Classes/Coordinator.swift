@@ -11,10 +11,17 @@ class Coordinator {
 
     func openRootViewController() {
         if Twitter.sharedInstance().sessionStore.session()?.userID != nil {
-            openHomeTimelineViewController()
+            openTopTabBarController()
         } else {
             openLoginViewController()
         }
+    }
+
+    func openTopTabBarController() {
+        let viewController = TopTabBarController.instantiate()
+        let navigationController = UINavigationController(rootViewController: viewController)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 
     func openLoginViewController() {

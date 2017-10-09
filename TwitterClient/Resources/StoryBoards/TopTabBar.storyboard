@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nms-l8-F4Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--タイムライン-->
+        <scene sceneID="Ypu-du-Ego">
+            <objects>
+                <tabBarController id="Nms-l8-F4Z" customClass="TopTabBarController" customModule="TwitterClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="タイムライン" id="s7b-M4-BTE">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="ログアウト" id="GXE-n9-Ykg">
+                            <connections>
+                                <action selector="didTapLogOutButton" destination="Nms-l8-F4Z" id="u1W-gd-3nK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3cA-Lt-cnc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <outlet property="logoutButton" destination="GXE-n9-Ykg" id="Di3-vA-0ju"/>
+                        <segue destination="xNc-aW-Qlf" kind="relationship" relationship="viewControllers" id="oQ2-ON-Ra9"/>
+                        <segue destination="Q8t-av-2vK" kind="relationship" relationship="viewControllers" id="wVT-jL-TrY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAc-gr-Z60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-407" y="0.0"/>
+        </scene>
+        <!--HomeTimeline-->
+        <scene sceneID="ZS0-7Z-dke">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeTimeline" id="xNc-aW-Qlf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="EBo-hG-wxg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh8-SZ-D2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="248" y="-276"/>
+        </scene>
+        <!--UserDetail-->
+        <scene sceneID="J1C-Cs-hFa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserDetail" id="Q8t-av-2vK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="G91-JM-GOd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPo-w6-EHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="21"/>
+        </scene>
+    </scenes>
+</document>

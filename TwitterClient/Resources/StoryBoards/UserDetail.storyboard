@@ -32,11 +32,16 @@
                             <outlet property="delegate" destination="WBW-jV-UOd" id="Nfe-eD-olA"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="" image="my_profile" selectedImage="my_profile" id="hrz-F3-PPV"/>
                     <navigationItem key="navigationItem" title="ユーザー詳細画面" id="cDH-Bn-bkR"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UxB-V2-lHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-428" y="120"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="my_profile" width="25" height="28"/>
+    </resources>
 </document>

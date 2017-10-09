@@ -29,14 +29,14 @@
                                 <state key="normal" title="Login"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sns_happy" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L89-X6-TOk">
-                                <rect key="frame" x="57.5" y="113.5" width="260" height="240"/>
+                                <rect key="frame" x="58" y="114" width="260" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="Wws-cb-faq"/>
                                     <constraint firstAttribute="height" constant="240" id="Ytw-GS-YBb"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QAD-y2-bZO">
-                                <rect key="frame" x="57.5" y="383.5" width="260" height="59"/>
+                                <rect key="frame" x="58" y="384" width="260" height="59"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
